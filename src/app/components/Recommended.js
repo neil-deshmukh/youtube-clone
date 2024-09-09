@@ -27,7 +27,7 @@ export default function Recommended({ categoryId }) {
     <div className="flex flex-col space-y-3 pt-5">
       {data.map((video, i) => {
         return (
-          <div className="flex space-x-3 items-start">
+          <div className="flex space-x-3 items-start" key={video.id}>
             <Link href={`/video/${video.snippet.categoryId}/${video.id}`} className="w-[40%]">
               <img
                 src={video.snippet.thumbnails.medium.url}

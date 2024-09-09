@@ -35,7 +35,7 @@ export default function Container({ category, query }) {
       <div className="grid grid-cols-4 gap-x-5 gap-y-8">
         {videos.map((video, i) => {
           return (
-            <Link href={`/video/${video.snippet.categoryId}/${video.id}`}>
+            <Link href={`/video/${video.snippet.categoryId}/${video.id}`} key={video.id}>
               <Image
                 src={video.snippet.thumbnails.medium.url}
                 width={250}

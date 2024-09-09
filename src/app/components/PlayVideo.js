@@ -130,9 +130,9 @@ export default function PlayVideo({videoId}) {
             {value_converter(vidData.statistics.commentCount)} Comments
           </h5>
           <div className="flex flex-col space-y-7">
-            {comments.map(comment => {
+            {comments.map((comment, i) => {
               return (
-                <div className="flex space-x-5">
+                <div className="flex space-x-5" key={i}>
                   <div className="cursor-pointer">
                     <Image
                       src={comment.snippet.topLevelComment.snippet.authorProfileImageUrl}
